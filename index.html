@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
@@ -36,7 +37,46 @@
             harum nostrum facere dolores natus earum autem? Eveniet eius atque exercitationem perferendis fugiat nemo
             numquam, quasi id, dolorum, adipisci veritatis ut voluptas!</p>
     </section>
+    <div>
+        <button onclick="document.body.style.backgroundColor='red'"></button>
+        <button id="green" onclick="makegreen()"></button>
+        <button id="aqua"></button>
+        <button id="final">final button</button>
+        <button id="retake">final retake button</button>
+    </div>
+    <h3 id="nadim">this is nadim</h3>
+    <div>
+        <p id="name">this is your name</p>
+        <input type="text" id="input">
+        <button id="update">update</button>
+    </div>
+    <div>
+        <div id="comment-container">
+            <p>lorem50</p>
+            <p>lorem50</p>
+            <p>lorem50</p>
+        </div>
+        <textarea name="" id="textArea" cols="30" rows="10"></textarea>
+        <button type="button" id="button">button</button>
+    </div>
     <script src="dom.js"></script>
+    <script>
+        document.getElementById("button").addEventListener('click',function(){
+            // console.log("this is click")
+            const textFind = document.getElementById("textArea")
+            //  console.log(textFind)
+            const comment = textFind.value;
+            //   console.log(comment)
+            const commentContainer = document.getElementById("comment-container")
+             const p = document.createElement('p')
+             p.innerText = comment;
+             commentContainer.appendChild(p);
+             textFind.value = ""
+
+
+
+        })
+    </script>
 </body>
 
 </html>
